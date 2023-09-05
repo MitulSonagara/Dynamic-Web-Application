@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const routes = require("./routes/main");
 const async = require("hbs/lib/async");
 const details = require("./models/details");
+const slider = require("./models/slider");
 
 const app = express();
 
@@ -22,6 +23,30 @@ main().catch(err => console.log(err));
 async function main() {
     await mongoose.connect('mongodb://127.0.0.1:27017/Dynamic-web-app');
     console.log("database connected");
+
+    // slider.create([
+    //     {
+    //         title: "Learn java in very easy manner!",
+    //         subTitle: "Java is the one of the most populer programming language.",
+    //         imageUrl: "/public/images/pic1.jpg"
+    //     },
+    //     {
+    //         title: "What is django in pyhton?",
+    //         subTitle: "Django is most famus web framework of python programming.",
+    //         imageUrl: "/public/images/pic2.jpg"
+    //     },
+    //     {
+    //         title: "What about node js?",
+    //         subTitle: "Node js is runtime environment to execute javascript outside browser.",
+    //         imageUrl: "/public/images/pic3.jpg"
+    //     },
+    //     {
+    //         title: "Learn java in very easy manner!",
+    //         subTitle: "Java is the one of the most populer programming language",
+    //         imageUrl: "/public/images/pic4.jpg"
+    //     },
+    // ]);
+
     // detail.create({
     //     brandName: "mitul",
     //     brandIconUrl: "http://localhost:3000/public/images/pic.jpg",

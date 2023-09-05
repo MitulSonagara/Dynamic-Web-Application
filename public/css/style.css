@@ -1,3 +1,4 @@
 .slider-image {
-    height: 600px !important;
+    height: 650px !important;
+    object-fit: cover;
 }
