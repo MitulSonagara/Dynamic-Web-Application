@@ -5,10 +5,12 @@ const routes = require("./routes/main");
 const async = require("hbs/lib/async");
 const details = require("./models/details");
 const slider = require("./models/slider");
+const service = require("./models/service");
+const bodyParser = require("body-parser");
 
 const app = express();
 
-
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/public", express.static("public"));
 app.use("", routes);
 
@@ -23,6 +25,74 @@ main().catch(err => console.log(err));
 async function main() {
     await mongoose.connect('mongodb://127.0.0.1:27017/Dynamic-web-app');
     console.log("database connected");
+
+
+
+    // service.create([
+    //     {
+    //         icon: "fa-solid fa-graduation-cap",
+    //         title: "Provide Best Courses",
+    //         description: "We provide courses that helps students in learning and placement.",
+    //         linkText: "Check",
+    //         link: "#"
+    //     },
+    //     {
+    //         icon: "fa-solid fa-school",
+    //         title: "Provide Best Courses",
+    //         description: "We provide courses that helps students in learning and placement.",
+    //         linkText: "Check",
+    //         link: "#"
+    //     },
+    //     {
+    //         icon: "fa-solid fa-envelope",
+    //         title: "Provide Best Courses",
+    //         description: "We provide courses that helps students in learning and placement.",
+    //         linkText: "Check",
+    //         link: "#"
+    //     },
+    //     {
+    //         icon: "fa-solid fa-star",
+    //         title: "Provide Best Courses",
+    //         description: "We provide courses that helps students in learning and placement.",
+    //         linkText: "Check",
+    //         link: "#"
+    //     },
+    //     {
+    //         icon: "fa-solid fa-location-dot",
+    //         title: "Provide Best Courses",
+    //         description: "We provide courses that helps students in learning and placement.",
+    //         linkText: "Check",
+    //         link: "#"
+    //     },
+    //     {
+    //         icon: "fa-solid fa-wand-magic-sparkels",
+    //         title: "Provide Best Courses",
+    //         description: "We provide courses that helps students in learning and placement.",
+    //         linkText: "Check",
+    //         link: "#"
+    //     },
+    //     {
+    //         icon: "fa-solid fa-truck-fast",
+    //         title: "Provide Best Courses",
+    //         description: "We provide courses that helps students in learning and placement.",
+    //         linkText: "Check",
+    //         link: "#"
+    //     },
+    //     {
+    //         icon: "fa-solid fa-pen-nib",
+    //         title: "Provide Best Courses",
+    //         description: "We provide courses that helps students in learning and placement.",
+    //         linkText: "Check",
+    //         link: "#"
+    //     },
+    //     {
+    //         icon: "fa-solid fa-paperclip",
+    //         title: "Provide Best Courses",
+    //         description: "We provide courses that helps students in learning and placement.",
+    //         linkText: "Check",
+    //         link: "#"
+    //     },
+    // ]);
 
     // slider.create([
     //     {
