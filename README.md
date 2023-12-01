@@ -1,6 +1,6 @@
 # Dynamic Website Project
 
-This is a dynamic website project that allows you to easily update various content elements such as the logo, brand name, navigation bar labels and links, slider images, service cards, and more, all through a MongoDB database. It uses Bootstrap, HTML, CSS for the frontend, and Node.js and Express.js for the backend. The templating engine used is Handlebars (HBS).
+This is a dynamic website project that allows you to easily update various content elements such as the logo, brand name, navigation bar labels and links, slider images, service cards, and more, all through a MongoDB database. It uses Bootstrap, HTML, CSS for the frontend, and Node.js and Express.js for the backend. The templating engine used is Handlebars (HBS). 
 
 ## Table of Contents
 
